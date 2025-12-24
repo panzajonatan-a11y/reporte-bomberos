@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Reporte Bomberos Voluntarios de Mattaldi</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, sans-serif;
+  padding: 15px;
+  background: #f4f4f4;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  background: #b71c1c;
+  color: white;
+  padding: 10px;
+}
+textarea {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+button {
+  width: 100%;
+  padding: 12px;
+  background: #2e7d32;
+  color: white;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+</style>
+</head>
+<body>
+
+<h1>🚒 Bomberos Voluntarios de Mattaldi 92/R3</h1>
+
+<h2><b>Informe de salida</b></h2>
+<textarea id="s1">Fecha:
+Tipo de siniestro:
+Hora de salida:
+Hora de regreso:
+Cantidad de dotaciones:
+Cantidad de Bomberos:
+Tipo de unidades:
+Lugar del siniestro:
+Superficie afectada:
+Observaciones:
+Datos:</textarea>
+<button onclick="copiar('s1')">Copiar Informe de salida</button>
+
+<h2><b>EVENTOS ESPECIALES</b></h2>
+<textarea id="s2">Tipo de evento:
+Fecha y hora de inicio:
+Fecha y hora de regreso:
+Lugar:
+Asistentes:
+Móvil N°:
+Observaciones:</textarea>
+<button onclick="copiar('s2')">Copiar Eventos Especiales</button>
+
+<h2><b>Modelo de reporte</b></h2>
+<textarea id="s3">Eventos:
+Milimetraje caídos:
+Vientos:
+Daños:
+Recursos afectados y trabajando:
+Observaciones:</textarea>
+<button onclick="copiar('s3')">Copiar Modelo de reporte</button>
+
+<script>
+function copiar(id) {
+  const t = document.getElementById(id);
+  t.select();
+  t.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  alert("Texto copiado correctamente");
+}
+</script>
+
+</body>
+</html>
