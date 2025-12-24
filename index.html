@@ -4,26 +4,35 @@
 <meta charset="UTF-8">
 <title>Reporte Bomberos Voluntarios de Mattaldi</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <style>
 body {
   font-family: Arial, sans-serif;
   padding: 15px;
   background: #f4f4f4;
 }
+
 h1 {
   text-align: center;
+  margin-bottom: 25px;
 }
+
 h2 {
   background: #b71c1c;
   color: white;
   padding: 10px;
+  border-radius: 5px;
 }
+
 textarea {
   width: 100%;
-  height: 200px;
+  height: 220px;
+  margin-top: 10px;
   margin-bottom: 10px;
   font-size: 14px;
+  padding: 10px;
 }
+
 button {
   width: 100%;
   padding: 12px;
@@ -31,16 +40,23 @@ button {
   color: white;
   border: none;
   font-size: 16px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
+  border-radius: 5px;
 }
 </style>
 </head>
+
 <body>
 
-<h1>🚒 Bomberos Voluntarios de Mattaldi 92/R3</h1>
+<h1>🚒 Reportes – Bomberos Voluntarios de Mattaldi</h1>
 
-<h2><b>Informe de salida</b></h2>
-<textarea id="s1">Fecha:
+<!-- INFORME DE SALIDA -->
+<h2>Informe de salida</h2>
+<textarea id="s1">Bomberos Voluntarios de Mattaldi 92/R3.
+
+*Informe de salida*
+
+Fecha:
 Tipo de siniestro:
 Hora de salida:
 Hora de regreso:
@@ -53,18 +69,24 @@ Observaciones:
 Datos:</textarea>
 <button onclick="copiar('s1')">Copiar Informe de salida</button>
 
-<h2><b>EVENTOS ESPECIALES</b></h2>
-<textarea id="s2">Tipo de evento:
+<!-- EVENTOS ESPECIALES -->
+<h2>Eventos especiales</h2>
+<textarea id="s2">*EVENTOS ESPECIALES*
+
+Tipo de evento:
 Fecha y hora de inicio:
 Fecha y hora de regreso:
 Lugar:
 Asistentes:
 Móvil N°:
 Observaciones:</textarea>
-<button onclick="copiar('s2')">Copiar Eventos Especiales</button>
+<button onclick="copiar('s2')">Copiar Eventos especiales</button>
 
-<h2><b>Modelo de reporte</b></h2>
-<textarea id="s3">Eventos:
+<!-- MODELO DE REPORTE -->
+<h2>Modelo de reporte</h2>
+<textarea id="s3">*Modelo de reporte*
+
+Eventos:
 Milimetraje caídos:
 Vientos:
 Daños:
@@ -74,9 +96,9 @@ Observaciones:</textarea>
 
 <script>
 function copiar(id) {
-  const t = document.getElementById(id);
-  t.select();
-  t.setSelectionRange(0, 99999);
+  const texto = document.getElementById(id);
+  texto.select();
+  texto.setSelectionRange(0, 99999);
   document.execCommand("copy");
   alert("Texto copiado correctamente");
 }
